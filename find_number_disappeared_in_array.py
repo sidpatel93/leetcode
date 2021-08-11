@@ -10,9 +10,7 @@ def findDisappearedNumbers(nums):
             arrayToReturn.append(j+1)
     return arrayToReturn
 
-
 print(findDisappearedNumbers([1,2,4,1,4,2]))
-
 
 
 
