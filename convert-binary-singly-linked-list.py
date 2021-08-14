@@ -27,3 +27,11 @@ class Solution:
             tail = tail.next
             # print(tail)
         return decimal
+
+
+    def second_approach(self, head):
+        num = head.val
+        while(head.next):
+            num = num *2 + head.next.val
+            head = head.next
+        return num
