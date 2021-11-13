@@ -9,4 +9,4 @@ def bubbleSort(arr):
         arr[j+1] = temp
   return arr
 
-print(bubbleSort([5,6,-3,2,4,-1]))
+print(bubbleSort([34,22,0,2,10,19,17]))
