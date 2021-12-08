@@ -10,9 +10,24 @@ def lengthOfLongestSubstring(s):
         charCount[s[windowEnd]] = windowEnd
     return longestString
 
+def anotherLengthOfLongestSubstring(s):
+    start = 0
+    end = 0
+    maxLength = 0
+    charSet = set()
+    while(end < len(s)):
+        if s[end] not in charSet:
+            charSet.add(s[end])
+            end += 1
+            maxLength = max(maxLength, len(charSet))
+        else:
+            charSet.remove(s[start])
+            start += 1
+    return maxLength
 
-print(lengthOfLongestSubstring("abcabcbb"))
 
-print(lengthOfLongestSubstring("bbbb"))
+print(anotherLengthOfLongestSubstring("abcabcbb"))
 
-print(lengthOfLongestSubstring("aab"))
+print(anotherLengthOfLongestSubstring("bbbb"))
+
+print(anotherLengthOfLongestSubstring("aab"))
